@@ -65,10 +65,6 @@ public class User {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        final String pattern = "\\+7\\d{10}";
-
-        if (phoneNumber.matches(pattern)) {
-            this.phoneNumber = phoneNumber;
-        }
+        this.phoneNumber = phoneNumber;
     }
 }

@@ -18,22 +18,27 @@ public class UserServiceImpl implements UserService {
         this.userDao = userDao;
     }
 
+    @Transactional
     public void save(User user) {
         userDao.save(user);
     }
 
+    @Transactional(readOnly = true)
     public List<User> index() {
         return userDao.index();
     }
 
+    @Transactional(readOnly = true)
     public User show(int id) {
         return userDao.show(id);
     }
 
+    @Transactional
     public void delete(int id) {
         userDao.delete(id);
     }
 
+    @Transactional
     public void update(int id, User user) {
         userDao.update(id, user);
     }
